@@ -62,10 +62,29 @@ const CountriesList = () => {
       <p className="">
         The Coronavirus caused by COVID-19, affects 199 territories in the
         world, this number is increasing every day <br />
-        <b className="text-danger">{sumOfConfirmed(totalConfirmed)}</b> cases
-        are confirmed Worldwide, of which {sumOfConfirmed(totalNewConfirmed)}{" "}
-        are recorded today.
       </p>
+      <div className="row my-4">
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-header">Confirmed Cases Globally</div>
+            <div class="card-body">
+              <h4 class="card-title text-danger">
+                {sumOfConfirmed(totalConfirmed).toLocaleString()}
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <div class="card">
+            <div class="card-header">Confirmed Cases Globally Today</div>
+            <div class="card-body">
+              <h4 class="card-title text-danger">
+                {sumOfConfirmed(totalNewConfirmed).toLocaleString()}
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
       <table class="table table-bordered table-responsive">
         <thead class="thead-dark">
           <tr>

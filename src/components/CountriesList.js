@@ -61,7 +61,7 @@ const CountriesList = () => {
       </h4>
       <p className="">
         The Coronavirus caused by COVID-19, affects 199 territories in the
-        world, this number is increasing every day <br />
+        world, this number is increasing every day. <br />
       </p>
       <div className="row my-4">
         <div className="col-lg-6 col-md-6 col-sm-12">

@@ -64,7 +64,7 @@ const CountriesList = () => {
         world, this number is increasing every day <br />
         <b className="text-danger">{sumOfConfirmed(totalConfirmed)}</b> cases
         are confirmed Worldwide, of which {sumOfConfirmed(totalNewConfirmed)}{" "}
-        are recorded today
+        are recorded today.
       </p>
       <table class="table table-bordered table-responsive">
         <thead class="thead-dark">

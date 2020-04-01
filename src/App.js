@@ -1,8 +1,8 @@
-import React, { useEffect, useState, Fragment } from "react";
-import axios from "axios";
+import React, { Fragment } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CountriesList from "./components/CountriesList";
+import Charts from "./components/Charts";
 
 const App = () => {
   return (

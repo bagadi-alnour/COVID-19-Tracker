@@ -54,104 +54,112 @@ const CountriesList = () => {
     </Fragment>
   ));
   return (
-    <div className="container my-3">
-      <h1 className="my-2">COVID-19 tracker</h1>
-      <h4 className="text-muted">
-        By{" "}
-        <a
-          href="https://github.com/bagadi-alnour"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Bagadi{" "}
-        </a>{" "}
-      </h4>
-      <p className="">
-        The Coronavirus caused by COVID-19, affects 199 territories in the
-        world, this number is increasing every day. <br />
-      </p>
-      <div className="row my-4">
-        <div className="col-lg-6 col-md-6 col-sm-12">
-          <div className="card">
-            <div className="card-header">Confirmed Cases Globally</div>
-            <div className="card-body">
-              <h4 className="card-title text-danger">
-                {sumOfConfirmed(totalConfirmed).toLocaleString()}
-              </h4>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-6 col-md-6 col-sm-12">
-          <div className="card">
-            <div className="card-header">Confirmed Cases Globally Today</div>
-            <div className="card-body">
-              <h4 className="card-title text-danger">
-                {sumOfConfirmed(totalNewConfirmed).toLocaleString()}
-              </h4>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 my-2">
-          <div className="card">
-            <div className="card-header">Total Confirmed Deaths Globally</div>
-            <div className="card-body">
-              <h4 className="card-title text-danger">
-                {sumOfConfirmed(totalDeaths).toLocaleString()}
-              </h4>
-            </div>
-          </div>
-        </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 my-2">
-          <div className="card">
-            <div className="card-header">Total Confirmed Deaths Today</div>
-            <div className="card-body">
-              <h4 className="card-title text-danger">
-                {sumOfConfirmed(totalNewDeaths).toLocaleString()}
-              </h4>
-            </div>
-          </div>
+    <Fragment>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">COVID-19 tracker</h1>
+          <p class="lead text-">
+            The Coronavirus caused by COVID-19, affects 199 territories in the
+            world, this number is increasing every day. For more information go
+            to <a href="https://www.who.int/"> The World Health Organization</a>
+          </p>
+          <p class="lead">
+            By :{" "}
+            <a
+              className="text-muted"
+              href="http://www.bagadi-alnour.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bagadi Alnour
+            </a>
+          </p>
         </div>
       </div>
-      <table className="table table-bordered table-responsive">
-        <thead className="thead-dark">
-          <tr>
-            <th scope="col">Countries </th>
-            <th scope="col"> New Confirmed</th>
-            <th scope="col">Total Confirmed</th>
-            <th scope="col">New deaths </th>
-            <th scope="col">Total deaths</th>
-            <th scope="col">New recovered</th>
-            <th scope="col">Total recovered</th>
-            <th scope="col">Death percentage</th>
-          </tr>
-        </thead>
-        <tbody>
-          {list}
-          <tr>
-            <th>Total</th>
-            <td className="font-weight-bold">
-              {sumOfConfirmed(totalNewConfirmed).toLocaleString()}
-            </td>
-            <td className="text-warning  font-weight-bold">
-              {sumOfConfirmed(totalConfirmed).toLocaleString()}
-            </td>
-            <td className="text-danger  font-weight-bold">
-              {sumOfConfirmed(totalNewDeaths).toLocaleString()}
-            </td>
-            <td className="text-danger  font-weight-bold">
-              {sumOfConfirmed(totalDeaths).toLocaleString()}
-            </td>
-            <td className="text-success  font-weight-bold">
-              {sumOfConfirmed(totalnewRecovered).toLocaleString()}
-            </td>
-            <td className="text-success font-weight-bold">
-              {sumOfConfirmed(totalRecovered).toLocaleString()}
-            </td>
-            <td>%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <div className="container mb-3">
+        <div className="row">
+          <div className="col-lg-6 col-md-6 col-sm-12">
+            <div className="card">
+              <div className="card-header">Confirmed Cases Globally</div>
+              <div className="card-body">
+                <h4 className="card-title text-danger">
+                  {sumOfConfirmed(totalConfirmed).toLocaleString()}
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6 col-md-6 col-sm-12">
+            <div className="card">
+              <div className="card-header">Confirmed Cases Globally Today</div>
+              <div className="card-body">
+                <h4 className="card-title text-danger">
+                  {sumOfConfirmed(totalNewConfirmed).toLocaleString()}
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6 col-md-6 col-sm-12 my-2">
+            <div className="card">
+              <div className="card-header">Total Confirmed Deaths Globally</div>
+              <div className="card-body">
+                <h4 className="card-title text-danger">
+                  {sumOfConfirmed(totalDeaths).toLocaleString()}
+                </h4>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6 col-md-6 col-sm-12 my-2">
+            <div className="card">
+              <div className="card-header">Total Confirmed Deaths Today</div>
+              <div className="card-body">
+                <h4 className="card-title text-danger">
+                  {sumOfConfirmed(totalNewDeaths).toLocaleString()}
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <table className="table table-bordered table-responsive">
+          <thead className="thead-dark">
+            <tr>
+              <th scope="col">Countries </th>
+              <th scope="col"> New Confirmed</th>
+              <th scope="col">Total Confirmed</th>
+              <th scope="col">New deaths </th>
+              <th scope="col">Total deaths</th>
+              <th scope="col">New recovered</th>
+              <th scope="col">Total recovered</th>
+              <th scope="col">Death percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {list}
+            <tr>
+              <th>Total</th>
+              <td className="font-weight-bold">
+                {sumOfConfirmed(totalNewConfirmed).toLocaleString()}
+              </td>
+              <td className="text-warning  font-weight-bold">
+                {sumOfConfirmed(totalConfirmed).toLocaleString()}
+              </td>
+              <td className="text-danger  font-weight-bold">
+                {sumOfConfirmed(totalNewDeaths).toLocaleString()}
+              </td>
+              <td className="text-danger  font-weight-bold">
+                {sumOfConfirmed(totalDeaths).toLocaleString()}
+              </td>
+              <td className="text-success  font-weight-bold">
+                {sumOfConfirmed(totalnewRecovered).toLocaleString()}
+              </td>
+              <td className="text-success font-weight-bold">
+                {sumOfConfirmed(totalRecovered).toLocaleString()}
+              </td>
+              <td>%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </Fragment>
   );
 };
 
